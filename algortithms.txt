@@ -1,0 +1,79 @@
+// Iterate through all obstacles to check for collisions with main player
+            document.querySelectorAll('*').forEach(function (obstacle) {
+
+                // If the element is an obstacle, determine if its collided with the main player
+                if (obstacle.id.substr(0, 12) == "div-obstacle") {
+
+                    // Determine the player's positions
+                    // x-plane
+                    var playerwidth = parseFloat(RemoveMetric($("#img-main-player").css("width")));
+                    var playerleft = parseFloat(RemoveMetric($("#img-main-player").css("left")));
+                    var playerright = playerleft + playerwidth;
+                    // y-plane
+                    var playerheight = parseFloat(RemoveMetric($("#img-main-player").css("height")));
+                    var playerbottom = parseFloat(RemoveMetric($("#img-main-player").css("top")));
+                    var playertop = playerbottom - playerheight;
+
+
+                    // Determine the obstacle's positions
+                    // x-plane
+                    var obstaclewidth = parseFloat(RemoveMetric($("#" + obstacle.id).css("width")));
+                    var obstacleleft = parseFloat(RemoveMetric($("#" + obstacle.id).css("left")));
+                    var obstacleright = obstacleleft + obstaclewidth;
+                    // y-plane
+                    var obstacleheight = parseFloat(RemoveMetric($("#" + obstacle.id).css("height")));
+                    var obstaclebottom = parseFloat(RemoveMetric($("#" + obstacle.id).css("top")));
+                    var obstacletop = obstaclebottom - obstacleheight;
+
+                    // Collision Conditions
+                    // x-plane
+                    var x_plane_collision = (playerleft < obstacleleft) && (obstacleleft < playerright) || (playerleft < obstacleright) && (obstacleright < playerright)
+                    // y-plane
+                    var y_plane_collision = (playertop < obstaclebottom) && (obstaclebottom < playerbottom) || (playertop < obstacletop) && (obstacletop < playerbottom)
+                    // Check collision
+                    if (x_plane_collision && y_plane_collision) {
+                        // console.log("Collision Detected !!!!!!");
+                        GameOver();
+                    }
+
+                    // If obstacle goes beyond main player
+                    if (obstacleright < playerleft) {
+                        $("#" + obstacle.id).remove();
+                    }
+
+                    // x-plane
+                    // console.log("playerwidth >> " + playerwidth);
+                    // console.log("playerleft >> " + playerleft);
+                    // console.log("playerright >> " + playerright);
+                    // console.log(" ");
+                    // console.log("obstaclewidth >> " + obstaclewidth);
+                    // console.log("obstacleleft >> " + obstacleleft);
+                    // console.log("obstacleright >> " + obstacleright);
+                    // y-plane
+                    // console.log("playerheight >> " + playerheight);
+                    // console.log("playertop >> " + playertop);
+                    // console.log("playerbottom >> " + playerbottom);
+                    // console.log(" ");
+                    // console.log("obstacleheight >> " + obstacleheight);
+                    // console.log("obstacletop >> " + obstacletop);
+                    // console.log("obstaclebottom >> " + obstaclebottom);
+
+
+                    // console.log(" ");
+                    // console.log("Collision Check Done");
+                    // console.log(" ");
+                    // console.log(" ");
+                }
+
+            });
+
+
+ // Animate transition out of navbutton
+            navbutton.animate([
+                { opacity: 1 },
+                { opacity: 0 }
+            ], {
+                duration: 2000, // milliseconds
+                easing: 'ease-in-out', //
+                delay: 10, // ms 
+            });
