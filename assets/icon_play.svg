@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 12.7 12.7"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="icon_play.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="8.7062522"
+     inkscape:cx="21.421387"
+     inkscape:cy="16.367548"
+     inkscape:window-width="1366"
+     inkscape:window-height="768"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g7309"
+       transform="translate(-0.05470986,-0.06153826)">
+      <rect
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.165476;stroke-opacity:0.115254;paint-order:stroke fill markers"
+         id="rect4547"
+         width="5.2952476"
+         height="5.2952476"
+         x="0.36849412"
+         y="6.6665306"
+         ry="0.83629143" />
+      <rect
+         style="fill:#000080;fill-opacity:1;stroke-width:0.283451;stroke-opacity:0.115254;paint-order:stroke fill markers"
+         id="rect5121"
+         width="9.0704679"
+         height="9.0704679"
+         x="2.0789347"
+         y="0.31985405"
+         ry="1.4325213" />
+      <rect
+         style="fill:#008000;fill-opacity:1;stroke-width:0.190313;stroke-opacity:0.115254;paint-order:stroke fill markers"
+         id="rect5123"
+         width="6.0900302"
+         height="6.0900302"
+         x="6.3508954"
+         y="6.4131923"
+         ry="0.96181351" />
+      <rect
+         style="fill:#eeff00;fill-opacity:1;stroke-width:0.126702;stroke-opacity:0.115254;paint-order:stroke fill markers"
+         id="rect5125"
+         width="4.0544896"
+         height="4.0544896"
+         x="0.77927607"
+         y="1.9678648"
+         ry="0.6403355" />
+      <rect
+         style="fill:#000012;fill-opacity:0.5;stroke-width:0.232168;stroke-opacity:0.115254;paint-order:stroke fill markers"
+         id="rect7313"
+         width="7.4294057"
+         height="7.4294057"
+         x="2.8994658"
+         y="1.140385"
+         ry="1.1733444" />
+      <rect
+         style="fill:#3e4200;fill-opacity:0.5;stroke-width:0.0873709;stroke-opacity:0.115254;paint-order:stroke fill markers"
+         id="rect7311"
+         width="2.7958872"
+         height="2.7958872"
+         x="1.4085771"
+         y="2.5971658"
+         ry="0.44156134" />
+      <rect
+         style="fill:#001d00;fill-opacity:0.59888577;stroke-width:0.133332;stroke-opacity:0.115254;paint-order:stroke fill markers"
+         id="rect7315"
+         width="4.2666278"
+         height="4.2666278"
+         x="7.2625966"
+         y="7.3248935"
+         ry="0.67383909" />
+      <rect
+         style="fill:#310000;fill-opacity:0.5;stroke-width:0.119891;stroke-opacity:0.115254;paint-order:stroke fill markers"
+         id="rect7317"
+         width="3.8365257"
+         height="3.8365257"
+         x="1.097855"
+         y="7.3958917"
+         ry="0.60591191" />
+    </g>
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.81894147;stroke-width:0.396875;stroke-opacity:0.115254;paint-order:stroke fill markers"
+       id="play_triangle"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="5.9954314"
+       sodipodi:cy="3.8035533"
+       sodipodi:r1="3.4711888"
+       sodipodi:r2="1.7355945"
+       sodipodi:arg1="1.0471976"
+       sodipodi:arg2="2.0943951"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 7.7310257,6.8096911 2.5242426,3.8035532 7.731026,0.79741576 Z"
+       inkscape:transform-center-x="0.74208294"
+       transform="matrix(0.855134,0,0,0.855134,1.9851867,1.5410017)" />
+  </g>
+</svg>

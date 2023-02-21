@@ -1,285 +1,281 @@
 /* CSS coded to respond to mobile devices first. My device 412x784 */
 
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Michroma&display=swap");
+@import url("fredokaone-regular.ttf");
 
 * {
-    font-family: "Arial";
+  font-family: "Arial";
 }
-
-
 
 #span-lives {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
-
 body {
-    background-color: rgb(0, 0, 0);
-    width: 90vw;
-    height: 90vh;
-    margin: auto;
-    margin-top: 10px;
-    border: 2px solid rgb(0, 0, 0);
-    position: relative;
+  background-color: rgb(0, 0, 0);
+  width: 360px;
+  overflow: scroll;
+  height: 90vh;
+  margin: auto;
+  margin-top: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  position: relative;
 }
 
 #div-top-bg {
-    margin: auto;
-    width: 90vw;
-    height: 50vh; 
-    position: relative;
-    border: solid gray 2px;
+  margin: auto;
+  width: 360px;
+  height: 50vh;
+  position: relative;
+  border: solid gray 2px;
 }
 
 .div-score {
-    text-align: right;
-    color: white;
-    background-color: black;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    font-size: 1.3em;
+  text-align: right;
+  color: white;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  font-size: 1.3em;
 }
 
-
 .div-enemy-square {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    right: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
 }
 
 .pause-button {
-    background-color: white;
-    width: 8px;
-    height: 30px;
-    margin: auto;
+  background-color: white;
+  width: 8px;
+  height: 30px;
+  margin: auto;
 }
 
 #div-pause-gamemenu {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    top: 3px;
-    left: 0px;
-    position: absolute;
-    width: 35px;
-    height: 40px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  top: 3px;
+  left: 0px;
+  position: absolute;
+  width: 35px;
+  height: 40px;
 }
 
-
-
 #div-bottom-bg {
-    margin: auto;
-    width: 90vw;
-    height: 50vh;
-    background-color: rgb(0, 0, 0);
+  margin: auto;
+  width: 360px;
+  height: 50vh;
+  background-color: rgb(0, 0, 0);
 }
 
 #div-color-box-container1 {
-    display: flex;
-    align-items: center;
-    padding-top: 5vw;
-    width: 85vw;
-    margin: auto;
-    opacity: 0.1;
-
+  display: flex;
+  align-items: center;
+  padding-top: 5vw;
+  width: 360px;
+  margin: auto;
+  opacity: 0.1;
 }
 
 #div-color-box-container2 {
-    display: flex;
-    align-items: center;
-    width: 85vw;
-    margin: auto;
-    opacity: 0.1;
+  display: flex;
+  align-items: center;
+  width: 360px;
+  margin: auto;
+  opacity: 0.1;
 }
 
 #div-color-box-container3 {
-    display: flex;
-    align-items: center;
-    width: 85vw;
-    margin: auto;
-    display: none;
+  display: flex;
+  align-items: center;
+  width: 360px;
+  margin: auto;
+  display: none;
 }
 
 #div-color-box-container4 {
-    align-items: center;
-    width: 90vw;
-    margin: auto;
-    top: -30px;
-    left: 0px;
-    position: absolute;
+  align-items: center;
+  width: 360px;
+  margin: auto;
+  top: -30px;
+  left: 0px;
+  position: absolute;
 }
 
 .div-start-button {
-    text-align: center;
-    font-size: 15px;
-    background-color: rgb(90, 90, 90);
-    color: rgb(255, 255, 255);
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 4px;
-    margin: auto;
-    margin-top: 10vh;
-    width: 15vw;
-    height: 5vh;
+  text-align: center;
+  font-size: 15px;
+  background-color: rgb(90, 90, 90);
+  color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 4px;
+  margin: auto;
+  margin-top: 10vh;
+  width: 15vw;
+  height: 5vh;
 }
 
 #img-btn-start {
-    display: flex;
-    margin: auto;
-    width: 60%;
+  display: flex;
+  margin: auto;
+  /* background-color: blue; */
+  background-image: url("../assets/icon_play.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+
+#div-game-intro ul {
+  margin: 5px;
+  padding: 10px 32px 20px 32px;
 }
 
 #div-game-intro {
-    color: white;
-    margin: auto;
-    padding: 10px;
-    width: 70vw;
-    background-color: rgb(30, 30, 30);
+  color: black;
+  margin: auto;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  background-image: url("../assets/light_bg_1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #div-game-intro h1 {
-    text-align: center;
+  text-align: center;
 }
 
 #div-pause-menu {
-    text-align: center;
-    color: white;
-    background-color: rgb(24, 24, 24);
-    margin: auto;
-    font-size: 25px;
-    width: 70%;
-    border-radius: 25px;
-    border: 1px solid white;
-    display: none;
+  text-align: center;
+  color: white;
+  background-color: rgb(24, 24, 24);
+  margin: auto;
+  font-size: 25px;
+  width: 70%;
+  border-radius: 25px;
+  border: 1px solid white;
+  display: none;
 }
 
 #div-pause-menu button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 25px;
-    margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 .div-color-box-vert {
-    margin: 2vw;
-    margin-top: 4vw;
-    margin-bottom: 2vw;
-    width: 17vw;
-    height: 17vw;
-    border-radius: 5px;
+  margin: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
 }
 
 .div-color-box-hor {
-    margin: 2vw;
-    margin-top: 4vw;
-    width: 17vw;
-    height: 17vw;
-    border-radius: 5px;
+  margin: 2px;
+  margin-top: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
 }
 
 #div-box1 {
-    background-color: maroon;
+  background-color: maroon;
 }
 
 #div-box2 {
-    background-color: red;
+  background-color: red;
 }
 
 #div-box3 {
-    background-color: olive;
+  background-color: olive;
 }
 
 #div-box4 {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #div-box5 {
-    background-color: green;
+  background-color: green;
 }
 
 #div-box6 {
-    background-color: lime;
+  background-color: lime;
 }
 
 #div-box7 {
-    background-color: teal;
+  background-color: teal;
 }
 
 #div-box8 {
-    background-color: aqua;
-
+  background-color: aqua;
 }
 
 #div-box9 {
-    background-color: navy;
+  background-color: navy;
 }
 
 #div-box10 {
-    background-color: blue;
+  background-color: blue;
 }
 
 #div-box11 {
-    background-color: purple;
+  background-color: purple;
 }
 
 #div-box12 {
-    background-color: fuchsia;
-
+  background-color: fuchsia;
 }
 
-#kolour_logo_svg{
-    width: 30vw;
-    border: solid gray 1px;
+#kolour_logo_svg {
+  width: 30vw;
+  border: solid gray 1px;
 }
 
-#kolour_logo{
-    width: 30vw;
-    height: 6vh;
-    margin-right: 20px;
+#kolour_logo {
+  width: 30vw;
+  height: 6vh;
+  margin-right: 20px;
 }
 
 footer {
-    color: white;
-    height: 10vw;
-    padding-top: 5vw;
-    text-align: center;
-    
+  color: white;
+  height: 10vw;
+  padding-top: 5vw;
+  text-align: center;
 }
 
 footer hr {
-    color: red;
-    opacity: 0.3;
+  color: red;
+  opacity: 0.3;
 }
-
 
 /* When the device is wider than mobile view */
 
 @media only screen and (min-width: 520px) {
+  body {
+    background-color: rgb(71, 71, 71);
+  }
 
+  @media only screen and (min-height: 520px) {
     body {
-        background-color: rgb(71, 71, 71);
-
+      background-color: rgb(71, 71, 71);
     }
-
-    @media only screen and (min-height: 520px) {
-        body {
-            background-color: rgb(71, 71, 71);
-
-        }
-    }
+  }
 }
-
-
-
 
 /*   ANIMATIONS   */
 @keyframes nav-button-dissapear {
-
-    100% {
-        display: none;
-    }
+  100% {
+    display: none;
+  }
 }
