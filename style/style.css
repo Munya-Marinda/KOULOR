@@ -100,6 +100,7 @@ body {
 }
 
 #img-btn-start {
+  cursor: pointer;
   display: flex;
   margin: 20px 0px;
   /* background-color: blue; */
@@ -152,6 +153,7 @@ body {
 }
 
 .div-color-box-vert {
+  cursor: pointer;
   margin: 2px;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -161,6 +163,7 @@ body {
 }
 
 .div-color-box-hor {
+  cursor: pointer;
   margin: 2px;
   margin-top: 2px;
   width: 50px;

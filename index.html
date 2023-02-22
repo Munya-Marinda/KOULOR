@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>KOLOUR</title>
+    <title>KOLOR</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="script/script.js"></script>
@@ -11,7 +11,7 @@
   </head>
 
   <body onload="_app_ready()">
-    <div class="div-score">
+    <div ondblclick="clsKOLOR.Stop_Game()" class="div-score">
       LIVES: <span id="span-lives">20</span> SCORE:
       <span id="span-score"> 0</span>
     </div>
@@ -110,7 +110,7 @@
       </div>
     </div>
 
-    <footer>KOLOUR by MUNYA M.</footer>
+    <footer>KOLOR</footer>
 
     <script>
       function box_clicked(element) {
@@ -138,16 +138,15 @@
               current_color_box.css("background-color")
             ) {
               $("#" + enemy.id).remove();
-              clsKOLOUR.Inc_Score();
+              clsKOLOR.Inc_Score();
               bfound = true;
-              console.log("bfound to be true");
             }
           }
         }
 
         if (bfound == false) {
           // makes these enemies react to players incorrect color choice
-          clsKOLOUR.No_Such_Enemy(div_children_enemies);
+          clsKOLOR.No_Such_Enemy(div_children_enemies);
         }
       }
 
@@ -164,8 +163,8 @@
         // $("#div-color-box-container4").css("margin-top", parent_div_height / 3);
       }
 
-      //Class KOLOUR
-      class KOLOUR {
+      //Class KOLOR
+      class KOLOR {
         //Constructor
         constructor() {
           this.START_RATE = 2000; // rate at which the game starts
@@ -182,20 +181,20 @@
         Rate_Of_Total_Enemies() {
           this.RateOfEnemyGeneration *= 0.99; // slightly increase enemy speed
 
-          console.log("Rate is >>" + this.RateOfEnemyGeneration);
+          //   console.KOLOR("Rate is >>" + this.RateOfEnemyGeneration);
 
           // Interval/Event that generates enemies
           var new_GenerateEnemy = setInterval(function () {
             // enemy number added to it's unique ID
-            var num = clsKOLOUR.Total_Enemies().toString();
+            var num = clsKOLOR.Total_Enemies().toString();
 
             // Insert enemy-div (all enemies are divs)
             var newEnemy = document.createElement("div");
             newEnemy.id = "div-enemy" + num;
             newEnemy.className = "div-enemy-square";
-            var color = clsKOLOUR.Random_Color();
-            newEnemy.style.backgroundColor = clsKOLOUR.Random_Color();
-            newEnemy.style.top = clsKOLOUR.Random_Number() + "px";
+            var color = clsKOLOR.Random_Color();
+            newEnemy.style.backgroundColor = clsKOLOR.Random_Color();
+            newEnemy.style.top = clsKOLOR.Random_Number() + "px";
             newEnemy.innerHTML = "";
 
             //declare parent and node before desired postion
@@ -203,11 +202,6 @@
 
             //Add new node to parent
             parent.append(newEnemy);
-
-            console.table({
-              enemy: newEnemy.style.top,
-              parent: parent.clientHeight,
-            });
 
             // animation that moves the enemy
             $("#div-enemy" + num).animate({ left: 0 }, 5000);
@@ -254,10 +248,10 @@
 
                   if (enemyleft < 5) {
                     $("#" + enemy.id).remove();
-                    clsKOLOUR.Dec_Score();
+                    clsKOLOR.Dec_Score();
                   }
                 } catch (error) {
-                  console.log(error.toString());
+                  //   console.KOLOR(error.toString());
                 }
               }
             });
@@ -298,7 +292,7 @@
             this.RateCounter == 20 ||
             this.RateCounter == 30
           ) {
-            clsKOLOUR.Rate_Of_Total_Enemies();
+            clsKOLOR.Rate_Of_Total_Enemies();
 
             // reset game incremt counter
             if (this.RateCounter == 30) {
@@ -383,7 +377,7 @@
 
           // show play button
           document.getElementById("div-color-box-container4").style.display =
-            "block";
+            "flex";
 
           // make color buttons less visible
           document.getElementById(
@@ -395,6 +389,9 @@
           document.getElementById(
             "div-color-box-container3"
           ).style.opacity = 0.1;
+
+          // show game section
+          document.getElementById("div-the-game").style.display = "none";
         }
 
         // indicates when player presses a color that does not exist, recieves array of elements
@@ -415,17 +412,17 @@
         }
       }
       //Create Class(es)
-      let clsKOLOUR = new KOLOUR();
+      let clsKOLOR = new KOLOR();
 
       function Game_Start() {
         // Delete Enemies
-        clsKOLOUR.Event_DeleteEnemies();
+        clsKOLOR.Event_DeleteEnemies();
 
         // Generate Enemies
-        clsKOLOUR.Rate_Of_Total_Enemies();
+        clsKOLOR.Rate_Of_Total_Enemies();
 
         // reset scores
-        clsKOLOUR.Reset_Score();
+        clsKOLOR.Reset_Score();
       }
 
       // Click to start the game
