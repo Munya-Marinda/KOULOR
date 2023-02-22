@@ -16,88 +16,11 @@
       <span id="span-score"> 0</span>
     </div>
 
-    <div id="div-top-bg"></div>
-    <div id="div-bottom-bg">
-      <div id="div-color-box-container1">
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-hor"
-          id="div-box1"
-        ></div>
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-vert"
-          id="div-box2"
-        ></div>
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-hor"
-          id="div-box3"
-        ></div>
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-vert"
-          id="div-box4"
-        ></div>
-      </div>
-
-      <div id="div-color-box-container2">
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-vert"
-          id="div-box5"
-        ></div>
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-hor"
-          id="div-box6"
-        ></div>
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-vert"
-          id="div-box7"
-        ></div>
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-hor"
-          id="div-box8"
-        ></div>
-      </div>
-
-      <div id="div-color-box-container3">
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-hor"
-          id="div-box9"
-        ></div>
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-vert"
-          id="div-box10"
-        ></div>
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-hor"
-          id="div-box11"
-        ></div>
-        <div
-          onclick="box_clicked(this)"
-          class="div-color-box-vert"
-          id="div-box12"
-        ></div>
-      </div>
-
-      <br /><br />
-
-      <footer>KOLOUR by MUNYA M.</footer>
-    </div>
-
     <!-- Start game div -->
     <div id="div-color-box-container4">
       <div id="div-game-intro">
         <div>
           <h1>HOW PLAY</h1>
-
           <ul>
             <li>
               Click the matching colors that appear using the buttons below.
@@ -111,6 +34,84 @@
       <div id="img-btn-start"></div>
     </div>
 
+    <div id="div-the-game">
+      <div id="div-top-bg"></div>
+      <div id="div-bottom-bg">
+        <div id="div-color-box-container1">
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-hor"
+            id="div-box1"
+          ></div>
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-vert"
+            id="div-box2"
+          ></div>
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-hor"
+            id="div-box3"
+          ></div>
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-vert"
+            id="div-box4"
+          ></div>
+        </div>
+
+        <div id="div-color-box-container2">
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-vert"
+            id="div-box5"
+          ></div>
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-hor"
+            id="div-box6"
+          ></div>
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-vert"
+            id="div-box7"
+          ></div>
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-hor"
+            id="div-box8"
+          ></div>
+        </div>
+
+        <div id="div-color-box-container3">
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-hor"
+            id="div-box9"
+          ></div>
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-vert"
+            id="div-box10"
+          ></div>
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-hor"
+            id="div-box11"
+          ></div>
+          <div
+            onclick="box_clicked(this)"
+            class="div-color-box-vert"
+            id="div-box12"
+          ></div>
+        </div>
+
+        <br /><br />
+      </div>
+    </div>
+
+    <footer>KOLOUR by MUNYA M.</footer>
+
     <script>
       function box_clicked(element) {
         // checks if enemy exists when button press (player loses points if enemy does not exist)
@@ -123,7 +124,6 @@
 
         // stores children that are enemies
         var div_children_enemies = [];
-        const debug = { what: "debug" };
 
         // Iterate through all enemies
         for (let i = 0; i < div_children.length; i++) {
@@ -132,11 +132,6 @@
           // Delete corrosponding color enemies
           if (enemy.id.substr(0, 9) == "div-enemy") {
             div_children_enemies.push(enemy);
-
-            debug[enemy.id.substr(0, 9)] =
-              $("#" + enemy.id).css("background-color") +
-              " | " +
-              current_color_box.css("background-color");
 
             if (
               $("#" + enemy.id).css("background-color") ==
@@ -149,8 +144,6 @@
             }
           }
         }
-
-        console.table(debug);
 
         if (bfound == false) {
           // makes these enemies react to players incorrect color choice
@@ -168,7 +161,7 @@
         );
 
         // Center child div
-        $("#div-color-box-container4").css("margin-top", parent_div_height / 3);
+        // $("#div-color-box-container4").css("margin-top", parent_div_height / 3);
       }
 
       //Class KOLOUR
@@ -210,6 +203,11 @@
 
             //Add new node to parent
             parent.append(newEnemy);
+
+            console.table({
+              enemy: newEnemy.style.top,
+              parent: parent.clientHeight,
+            });
 
             // animation that moves the enemy
             $("#div-enemy" + num).animate({ left: 0 }, 5000);
@@ -435,6 +433,8 @@
         // hide game intro
         document.getElementById("div-color-box-container4").style.display =
           "none";
+        // show game section
+        document.getElementById("div-the-game").style.display = "block";
         // make color buttons more visible
         document.getElementById("div-color-box-container1").style.opacity = 1;
         document.getElementById("div-color-box-container2").style.opacity = 1;
