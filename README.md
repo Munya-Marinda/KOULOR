@@ -2,6 +2,11 @@
 
 A web-based game where you have to match the colors that appear on the screen before they disappear.
 
+### Rules:
+- Click the matching colors that appear using the buttons below.
+- Before they reach the other side.
+- Watch Out! Only choose colors that appear.
+
 ## PLAY NOW 🎮👉 https://munya-marinda.github.io/kolor/
 
 ### Screenshot 1
